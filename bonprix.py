@@ -1,6 +1,6 @@
 #! python3.7
 # bonprix.py - Imports comments from products into Excel spreadsheet"
-import requests, sys, bs4
+import requests, sys, bs4, pprint
 
 
 
@@ -10,9 +10,10 @@ response = requests.get(url)
 try:
     response.raise_for_status()
     text = response.text
-    print(text[:3000])
-    soup = bs4.Beautifulsoup(text, 'html.parser')
-    tags = soup.select(print
+    soup = bs4.BeautifulSoup(text, 'html.parser')
+    product_info = soup.select('#product-info td')
+    product_no = product_info[1].text
+    print(product_no)
 except Exception as exc:
     print('There was a problem: ', exc)
 
