@@ -1,5 +1,5 @@
 #! python3.7
-# bonprix.py - Imports comments from products into an Excel spreadsheet"
+# bonprix.py - Imports comments from Bonprix.ro products into an Excel spreadsheet"
 import requests, sys, bs4, pprint
 
 
