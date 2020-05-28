@@ -13,9 +13,9 @@ def plusMinus():
             positive += 1
         else:
             zero += 1
-    negative_ratio = round((negative / n), 6)
-    positive_ratio = round(float(positive / n), 6)
-    zero_ratio = round(zero / n, 6)
+    negative_ratio = negative / n
+    positive_ratio = positive / n
+    zero_ratio = zero / n
     return "{0:.6f}".format(positive_ratio) +'\n' + "{0:.6f}".format(negative_ratio) + '\n' + "{0:.6f}".format(zero_ratio)       
 
 
